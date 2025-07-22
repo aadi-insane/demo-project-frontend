@@ -1,39 +1,4 @@
-#topbar{
-
-    height: 40px;
-}
-
-#hero {
-    width: 100%;
-    height: 100vh;
-    background-color: #dacdbc;
-    overflow: hidden;
-    padding: 0;
-}
-
-section {
-    padding: 60px 0;
-}
-
-*,
-::after,
-::before {
-    box-sizing: border-box;
-}
-
-user agent stylesheet section {
-    display: block;
-    unicode-bidi: isolate;
-}
-
 body {
-    font-family: "Poppins", sans-serif;
-    color: #444444;
-    /* max-width: 1440px; */
-}
-
-body {
-    margin: 0;
     font-family: var(--bs-body-font-family);
     font-size: var(--bs-body-font-size);
     font-weight: var(--bs-body-font-weight);
@@ -41,80 +6,245 @@ body {
     color: var(--bs-body-color);
     text-align: var(--bs-body-text-align);
     background-color: var(--bs-body-bg);
-    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
+    margin: 0px;
 }
 
-:root {
-    --swiper-navigation-size: 44px;
+#hero {
+    height: 100vh;
+    overflow: hidden;
 }
 
-:root {
-    --swiper-theme-color: #007aff;
+.carousel-item img {
+    height: 100vh;
+    object-fit: cover;
 }
 
-:root {
-    --bs-blue: #0d6efd;
-    --bs-indigo: #6610f2;
-    --bs-purple: #6f42c1;
-    --bs-pink: #d63384;
-    --bs-red: #dc3545;
-    --bs-orange: #fd7e14;
-    --bs-yellow: #ffc107;
-    --bs-green: #198754;
-    --bs-teal: #20c997;
-    --bs-cyan: #0dcaf0;
-    --bs-black: #000;
-    --bs-white: #fff;
-    --bs-gray: #6c757d;
-    --bs-gray-dark: #343a40;
-    --bs-gray-100: #f8f9fa;
-    --bs-gray-200: #e9ecef;
-    --bs-gray-300: #dee2e6;
-    --bs-gray-400: #ced4da;
-    --bs-gray-500: #adb5bd;
-    --bs-gray-600: #6c757d;
-    --bs-gray-700: #495057;
-    --bs-gray-800: #343a40;
-    --bs-gray-900: #212529;
-    --bs-primary: #0d6efd;
-    --bs-secondary: #6c757d;
-    --bs-success: #198754;
-    --bs-info: #0dcaf0;
-    --bs-warning: #ffc107;
-    --bs-danger: #dc3545;
-    --bs-light: #f8f9fa;
-    --bs-dark: #212529;
-    --bs-primary-rgb: 13, 110, 253;
-    --bs-secondary-rgb: 108, 117, 125;
-    --bs-success-rgb: 25, 135, 84;
-    --bs-info-rgb: 13, 202, 240;
-    --bs-warning-rgb: 255, 193, 7;
-    --bs-danger-rgb: 220, 53, 69;
-    --bs-light-rgb: 248, 249, 250;
-    --bs-dark-rgb: 33, 37, 41;
-    --bs-white-rgb: 255, 255, 255;
-    --bs-black-rgb: 0, 0, 0;
-    --bs-body-color-rgb: 33, 37, 41;
-    --bs-body-bg-rgb: 255, 255, 255;
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-    --bs-body-font-family: var(--bs-font-sans-serif);
-    --bs-body-font-size: 1rem;
-    --bs-body-font-weight: 400;
-    --bs-body-line-height: 1.5;
-    Show all properties (16 more)
+.carousel-caption {
+    bottom: 0;
+    top: 0;
 }
 
-:root {
-    --animate-duration: 1s;
-    --animate-delay: 1s;
-    --animate-repeat: 1;
+#topbar {
+    background: transparent;
 }
 
-*,
-::after,
-::before {
-    box-sizing: border-box;
+#navbar {
+    background: transparent;
+    transition: all 0.3s ease;
+
+}
+
+#navbar.sticky {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5) !important;
+    margin-top: 0 !important;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#navbar.sticky #topbar {
+    display: none;
+}
+
+#topbar img {
+    height: 18px;
+    width: auto;
+}
+
+.z-3 {
+    z-index: 3 !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    #topbar {
+        font-size: 12px;
+    }
+}
+
+/* dropdown for select - option */
+select.form-control {
+    font-size: 1rem;
+    padding: 0.6rem 0.75rem;
+}
+
+
+.hero-image-container {
+    position: relative;
+}
+
+.hero-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-image-container .carousel-caption {
+    z-index: 2;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 10;
+}
+
+.carousel-caption h2 {
+    font-size: 48px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Satisfy;
+    font-weight: 700;
+}
+
+p {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.carousel-caption span {
+    color: yellow;
+}
+
+/* About style start */
+.about-content h3 {
+    color: rgb(95, 89, 80);
+    font-weight: 700;
+}
+
+.about-content p {
+    color: rgb(132, 132, 132);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.about-content li {
+    color: rgb(68, 68, 68);
+    font-weight: 400;
+    font-size: 15px;
+}
+
+/* About style end */
+
+/* Menu Section Style Start */
+.menu {
+    text-align: center;
+    /* Center text like <h3> and <p> */
+}
+
+.menu .card {
+    margin: 0 auto;
+    /* Center the card horizontally */
+}
+
+.menu .nav {
+    justify-content: center;
+    /* Center nav-pills inside header */
+}
+
+.menu .card.mb-3 {
+    margin: 2rem auto;
+    /* Center card and give space */
+}
+
+/* Menu Section Style end */
+
+/* Gallery-images */
+.image-wrapper {
+    width: 250px;
+    height: 180px;
+    /* border: 5px solid; */
+    background: conic-gradient(red, yellow);
+    border-radius: 35%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-image {
+    width: 95%;
+    height: 95%;
+    border-radius: 35%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive styling for smartphone screens */
+@media (max-width: 768px) {
+    .image-wrapper {
+        width: 180px;
+        height: 140px;
+    }
+
+    .gallery-image {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+/* Testimonial Section Stylings */
+/* .testimonials-section {
+    position: relative;
+    background: url('assets/img/testimonials/testimonials-bg.jpg') center center / cover no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+} */
+
+
+.testimonials-section {
+    position: relative;
+    background: url('assets/img/testimonials/testimonials-bg.jpg') center center / cover no-repeat;
+    padding: 60px 20px;
+    color: white;
+    z-index: 0;
+}
+
+.testimonials-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.testimonialCarousel-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 5px solid grey;
 }
