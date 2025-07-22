@@ -74,7 +74,7 @@
   {
     "id": "9",
     "name": "Red Souce Pasta",
-    "image-url": "https://res.cloudinary.com/deoegf9on/image/upload/v1753162962/cleopatra_lxrpqe.jpgu",
+    "image-url": "https://res.cloudinary.com/deoegf9on/image/upload/v1753162962/cleopatra_lxrpqe.jpg",
     "price": "₹560",
     "desc": "Pasta cooked in a tangy tomato-based red sauce with fresh herbs and spices.",
     "type": "speciality"
@@ -82,7 +82,7 @@
   {
     "id": "10",
     "name": "Munchirian Noodles",
-    "image-url": "https://images.unsplash.com/photo-1519864600265-abb23847ef2c",
+    "image-url": "https://res.cloudinary.com/deoegf9on/image/upload/v1753162962/juice_pe6dzj.webp",
     "price": "₹330",
     "desc": "Stir-fried noodles tossed with vegetables and spicy Manchurian sauce.",
     "type": "speciality"
