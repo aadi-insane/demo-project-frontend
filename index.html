@@ -40,27 +40,32 @@
 </head>
 
 <body>
-    <header id="hero" class="position-relative">
+    <header id="hero" class="position-relative mb-5 ">
 
-        <section id="topbar"
+        <!-- OLD TOP BAR -->
+        <!-- <section id="topbar"
             class="topbar container-fluid d-flex justify-content-center align-items-center py-1 position-absolute z-3 mt-2">
             <div class="d-flex align-items-center gap-2 m-0 p-0 w-auto">
                 <img id="topbar-image" src="assets/img/logo/smartphone2.png" alt="Phone" />
                 <span class="fw-semibold m-0 p-0 text-white" style="font-size: 14px;">+216 53 283 233</span>
             </div>
+        </section> -->
+
+        <section id="topbar" class="d-flex align-items-center position-absolute w-100 topbar-transparent">
+            <div
+                class="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
+                <i class="bi bi-phone d-flex align-items-center"><span>+216 53 283 233</span></i>
+                <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Mon-Thu: 12:00 AM - 23:00
+                        PM</span></i>
+                <i class="bi bi-clock ms-4 d-none d-lg-flex align-items-center"><span>Fri-Sun: 12:00 AM - 00:00
+                        PM</span></i>
+            </div>
         </section>
 
-        <nav id="navbar" class="navbar navbar-dark navbar-expand-lg position-absolute w-100 z-3 mt-4">
+        <nav id="navbar" class="navbar navbar-dark navbar-expand-lg position-absolute w-100 z-3">
             <div class="container-fluid">
-                <a class="navbar-brand text-white" href="#"
-                    style="font-family: Satisfy; font-size: 28px; font-weight: 400;">Pasta Cosi</a>
+                <a class="navbar-brand text-white" href="#">Pasta Cosi</a>
                 <div class="d-flex align-items-center gap-2">
-                    <button id="navbookbutton"
-                        onclick="document.getElementById('book-a-table').scrollIntoView({ behavior: 'smooth' });"
-                        class="btn btn-warning btn-sm" style="font-family: Poppins;">
-                        Book a Table
-                    </button>
-
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -89,10 +94,19 @@
 
                     </ul>
                 </div>
+                <!-- <button id="navbookbutton"
+                    onclick="document.getElementById('book-a-table').scrollIntoView({ behavior: 'smooth' });"
+                    class="btn btn-warning btn-sm d-none d-lg-flex text-white">
+                    Book a Table
+                </button> -->
+
+                <a id="navbookbutton" href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Book a
+                    table</a>
             </div>
         </nav>
 
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div id="carouselExampleCaptions" class="carousel carousel-fade" data-bs-ride="carousel"
+            data-bs-interval="3000">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -151,10 +165,12 @@
         </div>
     </header>
 
-
-    <section class="d-flex flex-column justify-content-center align-items-center text-center p-3 py-5 my-5" id="about">
-        <div class="card p-3 about-video" style="width: 18rem;">
-            <video src="assets/vdo/about.mp4" class="card-img-top" alt="about us" controls autoplay muted></video>
+    <!-- OLD ABOUT SECTION -->
+    <!-- <section
+        class="about-section d-flex flex-row gap-5 mt-5 justify-content-center align-items-center text-center p-3 py-5 my-5"
+        id="about">
+        <div class="card mx-5" id="about-video">
+            <video src="assets/vdo/about.mp4" class="card-img-top" alt="about us" controls autoplay loop muted></video>
         </div>
         <div class="about-content mt-4 p-3 text-start">
             <h3>Discover OUR HISTORY</h3>
@@ -173,8 +189,32 @@
             <p>Choose your pasta (Spaghetti, Penne, Farfalle, Tagliatelle) and it is served after dipping in a wheel of
                 parmigiano.</p>
         </div>
+    </section> -->
+
+    <!-- TEST ABOUT SECTION NO BS-->
+    <section class="about-section2" id="about">
+        <div id="about-video2">
+            <video src="assets/vdo/about.mp4" alt="about us" autoplay loop muted></video>
+        </div>
+        <div class="about-content2">
+            <h3>Discover OUR HISTORY</h3>
+            <p>Pasta Cosi is an Italian restaurant in Tunis, les Berges du Lac I. Embark on a gastronomic journey around
+                the flavors of overseas. Our chef offers a variety of pastas, risottos but also raclette.</p>
+
+            <p>WHAT you will taste at our place :</p>
+
+            <ul>
+                <li> <i class="bx bx-check-double"></i> Pasta with Parmigiano (White Sauce &amp; Red Sauce).</li>
+                <li><i class="bx bx-check-double"></i> Risottos.</li>
+                <li><i class="bx bx-check-double"></i> Salads.</li>
+                <li><i class="bx bx-check-double"></i> Raclette.</li>
+            </ul>
+            <p>Choose your pasta (Spaghetti, Penne, Farfalle, Tagliatelle) and it is served after dipping in a wheel of
+                parmigiano.</p>
+        </div>
     </section>
 
+    <!-- OLD MENU SECTION -->
     <section class="menu p-4 py-3" id="menu">
         <h3>Menu</h3>
         <p>Check out Tasty Menu</p>
@@ -196,9 +236,9 @@
 
                 </ul>
             </div>
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card mb-3 menu-card" style="max-width: 540px;">
                 <div class="row g-0">
-                    <div class="col-md-4">
+                    <div class="col-md-4 menu-item-image">
                         <img src="https://res.cloudinary.com/deoegf9on/image/upload/v1753162962/caesar_fztebc.jpg"
                             class="img-fluid rounded-start" alt="...">
                     </div>
@@ -215,8 +255,10 @@
         </div>
     </section>
 
+    <!-- OLD EVENTS SECTION -->
     <section class="events p-3" id="events">
-        <div id="carouselExample" class="carousel slide">
+        <h2 class="events-fixed-heading">Organize your <span>events</span> in our restuarant.</h2>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -226,73 +268,85 @@
                     aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3000">
-                    <h2>Organize your <span>events</span> in our restuarant.</h2>
-                    <img src="https://res.cloudinary.com/deoegf9on/image/upload/v1753165722/event-birthday_eaxbvs.webp"
-                        class="d-block w-100" alt="...">
-                    <div class="carousel-caption mt-4 p-3 text-start">
-                        <h3>Birthday Celebrations</h3>
-                        <h4>₹5000</h4>
-                        <p>Hosting a Birthday Party at our restaurant is a great way to bring a large group together for
-                            the ultimate celebration. You can meet with our event manager to plan all the celebration
-                            details:</p>
-                        <ul>
-                            <li>Food.</li>
-                            <li>Drinks.</li>
-                            <li>Decorations and party layout.</li>
-                        </ul>
-
-                        <p>We will make sure you have a fantastic birthday party.</p>
+                <div class="carousel-item active">
+                    <div class="carousel-content">
+                        <div class="carousel-image">
+                            <img src="https://res.cloudinary.com/deoegf9on/image/upload/v1753165722/event-birthday_eaxbvs.webp"
+                                alt="Birthday Celebrations">
+                        </div>
+                        <div class="carousel-text">
+                            <div class="carousel-caption">
+                                <h3>Birthday Celebrations</h3>
+                                <h4>₹5000</h4>
+                                <p>Hosting a Birthday Party at our restaurant is a great way to bring a large group together for
+                                    the ultimate celebration. You can meet with our event manager to plan all the celebration
+                                    details:</p>
+                                <ul>
+                                    <li>Food.</li>
+                                    <li>Drinks.</li>
+                                    <li>Decorations and party layout.</li>
+                                </ul>
+                                <p>We will make sure you have a fantastic birthday party.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <h2>Organize your <span>events</span> in our restuarant.</h2>
-                    <img src="https://res.cloudinary.com/deoegf9on/image/upload/v1753165722/event-birthday_eaxbvs.webp"
-                        class="d-block w-100" alt="...">
-                    <div class="carousel-caption mt-4 p-3 text-start">
-                        <h3>Holiday Party & more</h3>
-                        <h4>₹8000</h4>
-                        <p>The holidays are a hectic time of year. With all the responsibilities that come along with
-                            hosting, the holidays can come and go without much fun at all. Spend more time with your
-                            family and less time in the kitchen by having your holiday celebration at Pasta Cosi. There
-                            are many more types of events that we can host at Pasta Cosi like:
-                        </p>
-                        <ul>
-                            <li>Graduation parties.</li>
-                            <li>Engagement parties.</li>
-                            <li>Retirement parties.</li>
-                        </ul>
-
-                        <p>We will make sure you have a fantastic event party.</p>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <div class="carousel-image">
+                            <img src="https://res.cloudinary.com/deoegf9on/image/upload/v1753165722/event-birthday_eaxbvs.webp"
+                                alt="Holiday Party">
+                        </div>
+                        <div class="carousel-text">
+                            <div class="carousel-caption">
+                                <h3>Holiday Party & more</h3>
+                                <h4>₹8000</h4>
+                                <p>The holidays are a hectic time of year. With all the responsibilities that come along with
+                                    hosting, the holidays can come and go without much fun at all. Spend more time with your
+                                    family and less time in the kitchen by having your holiday celebration at Pasta Cosi. There
+                                    are many more types of events that we can host at Pasta Cosi like:
+                                </p>
+                                <ul>
+                                    <li>Graduation parties.</li>
+                                    <li>Engagement parties.</li>
+                                    <li>Retirement parties.</li>
+                                </ul>
+                                <p>We will make sure you have a fantastic event party.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <h2>Organize your <span>events</span> in our restuarant.</h2>
-                    <img src="https://res.cloudinary.com/deoegf9on/image/upload/v1753165722/event-baby_omzpvy.webp"
-                        class="d-block w-100" alt="...">
-                    <div class="carousel-caption mt-4 p-3 text-start">
-                        <h3>Baby & Bridal Shower</h3>
-                        <h4>₹6000</h4>
-                        <p>Both of these events are the perfect way to celebrate your amazing news! We can create a
-                            stress-free way to celebrate your special occasion for an intimate gathering with friends
-                            and family! We will take care of.</p>
-                        <ul>
-                            <li>Set up.</li>
-                            <li>Food.</li>
-                            <li>Drinks.</li>
-                        </ul>
-
-                        <p>while you focus on the invites, party favors, and decorations and other details for your
-                            event.</p>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <div class="carousel-image">
+                            <img src="https://res.cloudinary.com/deoegf9on/image/upload/v1753165722/event-baby_omzpvy.webp"
+                                alt="Baby & Bridal Shower">
+                        </div>
+                        <div class="carousel-text">
+                            <div class="carousel-caption">
+                                <h3>Baby & Bridal Shower</h3>
+                                <h4>₹6000</h4>
+                                <p>Both of these events are the perfect way to celebrate your amazing news! We can create a
+                                    stress-free way to celebrate your special occasion for an intimate gathering with friends
+                                    and family! We will take care of.</p>
+                                <ul>
+                                    <li>Set up.</li>
+                                    <li>Food.</li>
+                                    <li>Drinks.</li>
+                                </ul>
+                                <p>while you focus on the invites, party favors, and decorations and other details for your
+                                    event.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
                 data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
@@ -300,6 +354,7 @@
         </div>
     </section>
 
+    
     <!-- Book a Table Section -->
     <section class="book-table py-5" id="book-a-table">
         <div class="container">
@@ -461,27 +516,42 @@
     <section class="testimonials-section text-white py-5">
         <div class="container">
             <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner ">
                     <!-- Slide 1 -->
                     <div class="carousel-item testimonialCarousel-item active text-center" data-bs-interval="3000">
                         <img src="assets/img/testimonials/bachir.jpg" class="rounded-circle mb-3" width="80" height="80"
                             alt="User 1">
-                        <h5 class="mb-0">Amit Sharma</h5>
-                        <p class="text-light fst-italic">Food Blogger</p>
-                        <div class="text-warning mb-2">★★★★☆</div>
-                        <p class="w-75 mx-auto">"The food was delicious, and the service was top-notch! I’ll definitely
-                            come again."</p>
+                        <h5 class="mb-0">Bechir B</h5>
+                        <p class="text-light fst-italic work">CEO & Founder</p>
+                        <div class="text-warning mb-2">★★★★★</div>
+                        <p class="w-75 mx-auto text-light">"The best pasta in Tunis. Very good dishes, greedy portions,
+                            appetizing presentations, to be repeated and I strongly advise to all lovers of good pasta"
+                        </p>
                     </div>
 
                     <!-- Slide 2 -->
                     <div class="carousel-item testimonialCarousel-item text-center" data-bs-interval="3000">
-                        <img src="assets/img/testimonials/oussama.jpg" class="rounded-circle mb-3" width="80"
-                            height="80" alt="User 2">
-                        <h5 class="mb-0">Ritika Mehra</h5>
-                        <p class="text-light fst-italic">Event Planner</p>
-                        <div class="text-warning mb-2">★★★★★</div>
-                        <p class="w-75 mx-auto">"Perfect place for family dinner. Loved the ambiance and quick service!"
+                        <img src="assets/img/testimonials/sywar.jpg" class="rounded-circle mb-3" width="80" height="80"
+                            alt="User 2">
+                        <h5 class="mb-0">Sywar Jmayel</h5>
+                        <p class="text-light fst-italic work">Designer</p>
+                        <div class="text-warning mb-2 text-light">★★★★★</div>
+                        <p class="w-75 mx-auto text-light">"Freshness, variety, quality and impeccable service I
+                            <br>will
+                            certainly
+                            come back."
                         </p>
                     </div>
 
@@ -489,106 +559,40 @@
                     <div class="carousel-item testimonialCarousel-item text-center" data-bs-interval="3000">
                         <img src="assets/img/testimonials/rahma.jpg" class="rounded-circle mb-3" width="80" height="80"
                             alt="User 3">
-                        <h5 class="mb-0">Rahul Verma</h5>
-                        <p class="text-light fst-italic">Software Engineer</p>
+                        <h5 class="mb-0">Rahma Rh</h5>
+                        <p class="text-light fst-italic work">Store Owner</p>
                         <div class="text-warning mb-2">★★★★☆</div>
-                        <p class="w-75 mx-auto">"Quick service and a variety of dishes to choose from. Highly
-                            recommended!"</p>
+                        <p class="w-75 mx-auto text-light">"For
+                            pasta lovers 🍝 Pasta Cosi Is the best address a fast service, nice setting and the dishes
+                            are
+                            too too good 👌. I highly recommend it."</p>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-item testimonialCarousel-item text-center" data-bs-interval="3000">
+                        <img src="assets/img/testimonials/oussama.jpg" class="rounded-circle mb-3" width="80"
+                            height="80" alt="User 3">
+                        <h5 class="mb-0">Oussama Hamed</h5>
+                        <p class="text-light fst-italic work">Freelancer</p>
+                        <div class="text-warning mb-2">★★★★☆</div>
+                        <p class="w-75 mx-auto text-light">"A real treat at Pasta Cosi ❤️
+                            This dish is called "Hasta la Vistas Baby" 😅 and I chose tagliatelle as the pasta ❤️
+                            Price: 25DT Rating: 10/10."</p>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="carousel-item testimonialCarousel-item text-center" data-bs-interval="3000">
+                        <img src="assets/img/testimonials/mehdi.jpg" class="rounded-circle mb-3" width="80" height="80"
+                            alt="User 3">
+                        <h5 class="mb-0">Mehdi Jelassi</h5>
+                        <p class="text-light fst-italic work">Entrepreneur</p>
+                        <div class="text-warning mb-2">★★★★☆</div>
+                        <p class="w-75 mx-auto text-light">"For years the quality is excellent this place does not
+                            change but the menu is constantly enriched."</p>
                     </div>
 
                 </div>
-
-                <!-- Optional: Carousel Controls
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button> -->
             </div>
         </div>
     </section>
-
-    <!-- <section class="testimonials py-5 bg-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">What Our Customers Say</h2>
-                <p class="section-subtitle">Read reviews from our satisfied customers</p>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars mb-3">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </div>
-                            <p>"The best pasta in Tunis. Very good dishes, greedy portions, appetizing presentations, to
-                                be repeated and I strongly advise to all lovers of good pasta."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
-                                alt="Bechir B" class="author-img">
-                            <div class="author-info">
-                                <h5>Bechir B</h5>
-                                <span>CEO & Founder</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars mb-3">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </div>
-                            <p>"Freshness, variety, quality and impeccable service I will certainly come back."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face"
-                                alt="Sywar Jmayel" class="author-img">
-                            <div class="author-info">
-                                <h5>Sywar Jmayel</h5>
-                                <span>Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            <div class="stars mb-3">
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                                <i class="bi bi-star-fill text-warning"></i>
-                            </div>
-                            <p>"For pasta lovers 🍝 Pasta Cosi Is the best address a fast service, nice setting and the
-                                dishes are too too good .👌🏻 I highly recommend it."</p>
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
-                                alt="Rahma Rh" class="author-img">
-                            <div class="author-info">
-                                <h5>Rahma Rh</h5>
-                                <span>Store Owner</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Contact Section -->
     <section class="contact py-5" id="contact">
@@ -687,12 +691,12 @@
                 <div class="col-12 mb-3">
                     <h2 class="text-warning mb-0">Pasta Cosi</h2>
                 </div>
-                
+
                 <!-- Row 2: Description -->
                 <div class="col-12 mb-4">
                     <p class="mb-0">Pasta Cosi is specialized in Pasta with Parmigiano, Risotto, Salads & Raclette</p>
                 </div>
-                
+
                 <!-- Row 3: Social Media Icons -->
                 <div class="col-12 mb-4">
                     <div class="social-icons d-flex gap-4 justify-content-center">
@@ -704,15 +708,16 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- Row 4: Copyright -->
                 <div class="col-12 mb-2">
                     <p class="mb-0">&copy; Copyright <strong>Pasta Cosi</strong>. All Rights Reserved</p>
                 </div>
-                
+
                 <!-- Row 5: Designed by -->
                 <div class="col-12">
-                    <p class="mb-0">Designed by <a href="https://github.com/coder-aadii" class="text-warning">Aditya Aerpule</a></p>
+                    <p class="mb-0">Designed by <a href="https://github.com/coder-aadii" class="text-warning">Aditya
+                            Aerpule</a></p>
                 </div>
             </div>
         </div>
